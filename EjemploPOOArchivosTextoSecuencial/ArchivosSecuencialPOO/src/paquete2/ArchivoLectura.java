@@ -74,7 +74,7 @@ public class ArchivoLectura {
                 );
                 lista.add(p);
 
-            } // fin de while
+            } // fin de while |||||||||||||||||||||||||||||||
         }
     }
 

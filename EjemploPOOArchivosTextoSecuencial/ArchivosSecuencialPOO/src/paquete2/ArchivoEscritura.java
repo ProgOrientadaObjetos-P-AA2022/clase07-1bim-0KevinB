@@ -11,7 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Formatter;
-
+ 
 import paquete1.Profesor;
 
 public class ArchivoEscritura {
