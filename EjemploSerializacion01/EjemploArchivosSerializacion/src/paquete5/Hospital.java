@@ -46,4 +46,5 @@ public class Hospital implements Serializable {
     public double obtenerPresupuesto() {
         return presupuesto;
     }
+
 }
