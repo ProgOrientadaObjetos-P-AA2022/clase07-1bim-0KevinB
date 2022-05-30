@@ -61,8 +61,8 @@ public class EscrituraArchivoSecuencial {
     // del archivo
     public void establecerLista() {
         LecturaArchivoSecuencial l = new LecturaArchivoSecuencial(obtenerNombreArchivo());
-        l.establecerListaCalificaciones();
-        lista = l.obtenerListaCalificaciones();
+        l.establecerListaHospitales();
+        lista = l.obtenerListaHospitales();
     }
 
     public String obtenerNombreArchivo(){

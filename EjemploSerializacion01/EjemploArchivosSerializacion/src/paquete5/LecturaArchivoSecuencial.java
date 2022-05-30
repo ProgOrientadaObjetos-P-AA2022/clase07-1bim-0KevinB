@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class LecturaArchivoSecuencial {
 
     private ObjectInputStream entrada;
-    private ArrayList<Hospital> calificaciones;
+    private ArrayList<Hospital> hospitales;
     private String nombreArchivo;
 
     public LecturaArchivoSecuencial(String n) {
@@ -44,16 +44,16 @@ public class LecturaArchivoSecuencial {
         nombreArchivo = n;
     }
 
-    public void establecerListaCalificaciones() {
+    public void establecerListaHospitales() {
         // 
-        calificaciones = new ArrayList<>();
+        hospitales = new ArrayList<>();
         File f = new File(obtenerNombreArchivo());
         if (f.exists()) {
 
             while (true) {
                 try {
                     Hospital registro = (Hospital) entrada.readObject();
-                    calificaciones.add(registro);
+                    hospitales.add(registro);
                 } catch (EOFException endOfFileException) {
                     return; // se llegó al fin del archivo
 
@@ -70,8 +70,8 @@ public class LecturaArchivoSecuencial {
 
     }
 
-    public ArrayList<Hospital> obtenerListaCalificaciones() {
-        return calificaciones;
+    public ArrayList<Hospital> obtenerListaHospitales() {
+        return hospitales;
     }
 
     public String obtenerNombreArchivo() {
@@ -81,8 +81,8 @@ public class LecturaArchivoSecuencial {
     @Override
     public String toString() {
         String cadena = "Lista de Calificaciones\n";
-        for (int i = 0; i < obtenerListaCalificaciones().size(); i++) {
-            Hospital p = obtenerListaCalificaciones().get(i);
+        for (int i = 0; i < obtenerListaHospitales().size(); i++) {
+            Hospital p = obtenerListaHospitales().get(i);
             cadena = String.format("%s%s-%s-%.2f\n", cadena,
                     p.obtenerNombre(),
                     p.obtenerCamas(),

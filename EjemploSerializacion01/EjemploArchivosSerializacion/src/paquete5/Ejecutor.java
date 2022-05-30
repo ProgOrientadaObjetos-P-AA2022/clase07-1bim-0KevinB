@@ -36,7 +36,7 @@ public class Ejecutor {
         archivo.cerrarArchivo();
 
         LecturaArchivoSecuencial lectura = new LecturaArchivoSecuencial(nombreArchivo);
-        lectura.establecerListaCalificaciones();
+        lectura.establecerListaHospitales();
         System.out.println(lectura);
     }
 }
